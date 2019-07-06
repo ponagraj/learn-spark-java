@@ -1,0 +1,5 @@
+10,cse
+20,maths
+20,mathss
+30,library
+30,libraryy

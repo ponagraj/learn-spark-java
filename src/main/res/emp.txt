@@ -1,0 +1,6 @@
+1,naga,10
+2,manvi,10
+3,vinny,20
+4,nani,30
+5,dolly,20
+6,siva,20
