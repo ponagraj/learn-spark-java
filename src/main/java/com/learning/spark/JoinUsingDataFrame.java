@@ -17,11 +17,12 @@ public class JoinUsingDataFrame {
 				.setAppName("my appp")
 				.setMaster("local[*]");
 		JavaSparkContext jsc = new JavaSparkContext(conf);
+		//refer JonTables.java
 		//JonTables.joinTables(jsc);
-		JoinUsingDataFrame.broadcastExample(jsc);
+		JoinUsingDataFrame.dataframesExample(jsc);
 	}
 	
-	private static void broadcastExample(JavaSparkContext jsc) {
+	private static void dataframesExample(JavaSparkContext jsc) {
 		SparkSession session = SparkSession.builder().appName("my java app").master("local[*]").getOrCreate();
 		Dataset<Row> tableOneRows = session.read().schema(getTableOneSchema()).csv("src\\main\\res\\emp.txt");
 		Dataset<Row> tableTwoRows = session.read().csv("src\\main\\res\\dept.txt");
